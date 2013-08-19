@@ -6,31 +6,27 @@
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		
 	<meta name="author" content="杨亚楠" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="">
-
-		    
+	<meta name="description" content="" />
+	<meta name="keywords" content="">   
     <link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet">
- 
-		<link href="/static/css/bootstrap.min.css" rel="stylesheet" />
-		<link href="/static/css/todc-bootstrap.css" rel="stylesheet" />
-  		    <!-- Fav and touch icons -->
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/static/css/todc-bootstrap.css" rel="stylesheet" />
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/img/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/img/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/img/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/static/img/apple-touch-icon-57-precomposed.png">
-     <link rel="shortcut icon" href="/static/img/favicon.png">
-  <script src="http://cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-	
-		<script src="/static/js/jquery.js"></script>
-		 <script src="/static/js/bootstrap.min.js"></script>
-		<script src="/static/js/bootstrap-dropdown.js"></script>
-		 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <link rel="shortcut icon" href="/static/img/favicon.png">
+  	<script src="http://cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>	
+	<script src="/static/js/jquery.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+	<script src="/static/js/bootstrap-dropdown.js"></script>
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="/static/js/html5shiv.js"></script>
+    <script src="/static/js/html5shiv.js"></script>
+	<script src="/static/js/index.js"></script>
     <![endif]-->
-	  <script>
+	<script>
       !function ($) {
         $(function(){
           // carousel demo
@@ -41,7 +37,6 @@
 	
     <script src="/static/js/holder.js"></script>
   	</head>
-	
 	<style type="text/css">
 		body {
 			margin: 0px;
@@ -96,7 +91,7 @@
 		    margin: 0px 0px 10px;
 		}
 	</style>
-  	    <style>
+  	<style>
 
     /* GLOBAL STYLES
     -------------------------------------------------- */
@@ -360,30 +355,31 @@
             <div class="nav-collapse collapse">
               <ul class="nav">
 			{{with .headinfo}}
-                <li class="active"><a href="#">{{.WebName}}</a></li>
-                <li><a href="#about">{{.WebIndex}}</a></li>
-                <li><a href="#contact">{{.WebSecondIndex}}</a></li>
+                <li class="active"><a href="#">{{.WebIndex}}</a></li>
+                <li><a href="#about">{{.WebSecondIndex}}</a></li>
+                <li><a href="#contact">{{.WebThridIndex}}</a></li>
                 <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{.WebMoreIndex}}<b class="caret"></b></a>
-                  
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{.WebMoreIndex}}<b class="caret"></b></a>
+             
 				{{end}}
 				
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li class="nav-header">导演</li>
+                   {{with .More1}}
+					 <li class="nav-header">{{.Title}}</li>
 					<li>
-    					<a  href="#">1.交际能力强</a>
+    					<a  href="#">{{.SubContentF}}</a>
 					</li>
-                    <li><a href="#">2.长得帅</a></li>
-                    <li><a href="#">3.有胡子</a></li>
+                    <li><a href="#">{{.SubContentS}}</a></li>
+                    <li><a href="#">{{.SubContentT}}</a></li>
+					{{end}}
                     <li class="divider"></li>
-                    <li class="nav-header">演员</li>
-                    <li><a href="#">1.漂亮</a></li>
-                    <li><a href="#">2.女的</a></li>
+					{{with .More2}}
+                    <li class="nav-header">{{.Title}}</li>
+                    <li><a href="#">{{.SubContentF}}</a></li>
+                    <li><a href="#">{{.SubContentS}}</a></li>
+					{{end}}
                   </ul>
-				
-				
-				
                 </li>
               </ul>
             </div><!--/.nav-collapse -->

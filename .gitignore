@@ -1,0 +1,7 @@
+bin/bee
+pkg/darwin_amd64/github.com/astaxie/beego.a
+pkg/darwin_amd64/github.com/astaxie/beego/session.a
+pkg/darwin_amd64/github.com/garyburd/redigo/redis.a
+pkg/darwin_amd64/github.com/go-sql-driver/mysql.a
+pkg/darwin_amd64/github.com/howeyc/fsnotify.a
+src/SpringWeb/SpringWeb
